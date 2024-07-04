@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f8f9fa;
+    color: #343a40;
+    overflow: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    width:40%;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none; /* Remove underline for anchor tags */
+    color: #fff; /* Ensure text color is visible */
+}
+
+.btn-new {
+    background-color: #37B7C3;
+    width:40%;
+    text-align:center;
+    margin-left: 40px;           /* Push to the right */
+    padding: 10px 25px;
+    justify-content: space-between;   /* Align text items */
+    align-items: center;
+    border-radius : 30px;
+}
+
+.btn-new:hover {
+    background-color: #2b8b96;   /* Darker shade on hover */
+}
+
+
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.blog-post-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 25%; /* Four columns */
+    box-sizing: border-box;
+    min-width: 300px; /* Ensure a minimum width for responsiveness */
+}
+
+.blog-post {
+    flex-grow: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative; /* Ensure relative positioning for icon container */
+}
+
+.blog-post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.blog-post h2 {
+    margin-top: 0;
+}
+
+.blog-post p {
+    margin-bottom: 10px;
+}
+
+.timestamp {
+    display: none;
+    font-size: 0.9em;
+    color: #6c757d;
+    text-align: center;
+}
+
+.blog-post-wrapper:hover .timestamp {
+    display: block;
+    color: #070F2B;
+}
+
+.icon-container {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.edit-icon, .pin-icon, .delete-icon {
+    display: inline-block;
+}
+
+.edit-icon a, .pin-icon a, .delete-icon a {
+    text-decoration: none;
+}
+
+.post-content {
+    margin-bottom: 20px;
+}
+
+.edit-form {
+    display: none;
+    margin-top: 10px;
+}
+
+.edit-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none; /* Prevent user from resizing */
+    overflow: hidden;
+}
+
+.btn-save {
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 9px #999;
+}
+.btn-save:hover {background-color: #059212}
+
+.btn-save:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.btn-cancel {
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #C80036;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 9px #999;
+}
+.btn-cancel:hover {background-color: #C80036}
+
+.btn-cancel:active {
+  background-color: #C80036;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#search-bar {
+    width: 60%; /* Increased width for search bar */
+    padding: 28px 40px; /* Adjusted padding for better appearance */
+    margin-left: 20px; /* Margin between button and search bar */
+    border: 1px solid #ccc;
+    border-radius: 30px; /* Increased border radius for a rounded look */
+    font-size: 18px; /* Adjusted font size */
+    margin-top : 20px;
+    width:50px;
+
+    /* Optional: Background color and text color */
+    color: #333;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+#search-bar:focus {
+    outline: none; /* Remove focus outline */
+    border-color: #66afe9; /* Highlight border color on focus */
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6); /* Lighter shadow on focus */
+}
+
+#search-bar::placeholder {
+    color: #999; /* Placeholder text color */
+}
+
+#search-bar:hover {
+    background-color: #e9ecef; /* Light background color on hover */
+}
+
+#search-bar:focus:hover {
+    background-color: #d9d9d9; /* Light background color on focus and hover */
+}
+
+#search-bar::-webkit-input-placeholder {
+    /* Custom placeholder style for WebKit browsers */
+    color: #999;
+}
+
+#search-bar::-moz-placeholder {
+    /* Custom placeholder style for Firefox */
+    color: #999;
+    opacity: 1;
+}
+
+#search-bar:-ms-input-placeholder {
+    /* Custom placeholder style for IE/Edge */
+    color: #999;
+}
+
+#search-bar::placeholder {
+    /* Standard placeholder style */
+    color: #999;
+}
+
+
+
