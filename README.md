@@ -1,3 +1,3 @@
 # Blogposts
 
-This webiste is about to create the blog posts of your own.
+This is python django project consisting of only blog posts code without user authentication connecting with mysql database.
